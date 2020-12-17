@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		09512C09C95EE83D3499ED4ECDECF472 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		1FAC9B45E7D410E552B79A823906BD2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		2F900EA991EEB94CD55C6CA9726BBCE2 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A635E81CD3808B1120CB24F40689EE1 /* ReplaceMe.swift */; };
 		608786A37E826C7310B96D27741C9772 /* HowdySlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C60BD72A3C1753EB4DBE31C5A4AF686 /* HowdySlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		76867B7BCBDA77F4BEA478B05D4DABCC /* Pods-HowdySlider_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D001A2FE0469B33C7B68CAA01DABBBD /* Pods-HowdySlider_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7734F36252BBE7DD91C4F3746088CAEB /* Pods-HowdySlider_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5925906B282634A790753001E6333618 /* Pods-HowdySlider_Tests-dummy.m */; };
 		7DDA755BF2E9E813B92D599DF393D1E5 /* HowdySlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEE7D68A1681C4AE70BD97AB8D6B924 /* HowdySlider-dummy.m */; };
+		BC98A8BC258BAEC000DCE655 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC98A8BB258BAEC000DCE655 /* Carousel.swift */; };
+		BC98A8C1258BAEF700DCE655 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC98A8C0258BAEF700DCE655 /* CarouselCell.swift */; };
+		BC98A8C6258BAF3B00DCE655 /* CarouselCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC98A8C5258BAF3B00DCE655 /* CarouselCellData.swift */; };
+		BC98A8CB258BAF6100DCE655 /* CarouselPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC98A8CA258BAF6100DCE655 /* CarouselPageController.swift */; };
+		BC98A8D0258BAF8B00DCE655 /* ColorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC98A8CF258BAF8B00DCE655 /* ColorUtility.swift */; };
+		BC98A8D5258BAFA400DCE655 /* ShadowUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC98A8D4258BAFA400DCE655 /* ShadowUtility.swift */; };
 		D501F0DE836BEECFD6A0B7E0C42BAB74 /* Pods-HowdySlider_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD253312B3848CDB92AC37B326BCA67 /* Pods-HowdySlider_Example-dummy.m */; };
 		E9BE0CEF8B03EE2F9AF0224CF1F7B2C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		F2DBC6637E24FF6E0F5468A0A6EE853C /* Pods-HowdySlider_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76C5C9DF6BD0FD1EA2284EB4ADF614BE /* Pods-HowdySlider_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,8 +45,8 @@
 		0551DABE6C3FF3814DA29B914709BF02 /* Pods-HowdySlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HowdySlider_Example.release.xcconfig"; sourceTree = "<group>"; };
 		0D18A11379F66A53DBF5E314B246038A /* Pods-HowdySlider_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HowdySlider_Tests.modulemap"; sourceTree = "<group>"; };
 		100DD0FBBB8E6CFE80128A22F8493DE1 /* Pods-HowdySlider_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HowdySlider_Example-Info.plist"; sourceTree = "<group>"; };
-		11ACBD41592B18864D41E64283C5BBCB /* HowdySlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HowdySlider.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		149547F7FD1C3287C9DEA2283A4FAB51 /* HowdySlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HowdySlider.framework; path = HowdySlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11ACBD41592B18864D41E64283C5BBCB /* HowdySlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HowdySlider.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		149547F7FD1C3287C9DEA2283A4FAB51 /* HowdySlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HowdySlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F481F3259FCC1629EFBA49B9C97109 /* Pods-HowdySlider_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HowdySlider_Example-frameworks.sh"; sourceTree = "<group>"; };
 		1C60BD72A3C1753EB4DBE31C5A4AF686 /* HowdySlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HowdySlider-umbrella.h"; sourceTree = "<group>"; };
 		1D001A2FE0469B33C7B68CAA01DABBBD /* Pods-HowdySlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HowdySlider_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -50,21 +55,26 @@
 		2DE4EC4E3F1D68017222002284251A71 /* HowdySlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HowdySlider-prefix.pch"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		34D68636425092CAF73A2DC377DF6EF3 /* HowdySlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HowdySlider.modulemap; sourceTree = "<group>"; };
-		3A635E81CD3808B1120CB24F40689EE1 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = HowdySlider/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		4A66ECB77CD8163A52B60CE99CBEC2ED /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4A66ECB77CD8163A52B60CE99CBEC2ED /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5925906B282634A790753001E6333618 /* Pods-HowdySlider_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HowdySlider_Tests-dummy.m"; sourceTree = "<group>"; };
 		5DDA80EFDF2D9AB856C34550EA6DD344 /* HowdySlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HowdySlider.debug.xcconfig; sourceTree = "<group>"; };
-		6458B4193C5B2D81A87CBEADA55E40C0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6458B4193C5B2D81A87CBEADA55E40C0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6FD253312B3848CDB92AC37B326BCA67 /* Pods-HowdySlider_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HowdySlider_Example-dummy.m"; sourceTree = "<group>"; };
 		747AF3A15055F13EB6CC7CDC7B6D4C50 /* Pods-HowdySlider_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HowdySlider_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		76C5C9DF6BD0FD1EA2284EB4ADF614BE /* Pods-HowdySlider_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HowdySlider_Tests-umbrella.h"; sourceTree = "<group>"; };
 		8A1486F3A2CEF0658D167F54E6436069 /* Pods-HowdySlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HowdySlider_Example.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AB45E0A22E2D8016E41863230994BE75 /* HowdySlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HowdySlider.release.xcconfig; sourceTree = "<group>"; };
-		B9F9ACBF8F9BDEDB0BF895DD411B7916 /* Pods_HowdySlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HowdySlider_Example.framework; path = "Pods-HowdySlider_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F9ACBF8F9BDEDB0BF895DD411B7916 /* Pods_HowdySlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowdySlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAEE7D68A1681C4AE70BD97AB8D6B924 /* HowdySlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HowdySlider-dummy.m"; sourceTree = "<group>"; };
+		BC98A8BB258BAEC000DCE655 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Carousel.swift; path = HowdySlider/Classes/Carousel.swift; sourceTree = "<group>"; };
+		BC98A8C0258BAEF700DCE655 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarouselCell.swift; path = HowdySlider/Classes/CarouselCell.swift; sourceTree = "<group>"; };
+		BC98A8C5258BAF3B00DCE655 /* CarouselCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarouselCellData.swift; path = HowdySlider/Classes/CarouselCellData.swift; sourceTree = "<group>"; };
+		BC98A8CA258BAF6100DCE655 /* CarouselPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarouselPageController.swift; path = HowdySlider/Classes/CarouselPageController.swift; sourceTree = "<group>"; };
+		BC98A8CF258BAF8B00DCE655 /* ColorUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorUtility.swift; path = HowdySlider/Classes/ColorUtility.swift; sourceTree = "<group>"; };
+		BC98A8D4258BAFA400DCE655 /* ShadowUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShadowUtility.swift; path = HowdySlider/Classes/ShadowUtility.swift; sourceTree = "<group>"; };
 		BE3440EC9837E561D2717AF27344E9BD /* Pods-HowdySlider_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HowdySlider_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CC5B7E7E824667E6FD2CAABB3A465C71 /* Pods_HowdySlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HowdySlider_Tests.framework; path = "Pods-HowdySlider_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5B7E7E824667E6FD2CAABB3A465C71 /* Pods_HowdySlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowdySlider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FB22AF703AF3E58335B056E27042D6 /* Pods-HowdySlider_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HowdySlider_Tests-Info.plist"; sourceTree = "<group>"; };
 		D93B6A27A0C0A8FC405201BC395A4033 /* Pods-HowdySlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HowdySlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA689B10693E486C2821E50F1B28BD27 /* HowdySlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HowdySlider-Info.plist"; sourceTree = "<group>"; };
@@ -148,9 +158,14 @@
 		92A80B5F16CE5E984A5C52F43BCA5B67 /* HowdySlider */ = {
 			isa = PBXGroup;
 			children = (
-				3A635E81CD3808B1120CB24F40689EE1 /* ReplaceMe.swift */,
 				48D65BB4A47D3A9E7EC2160165B17AC7 /* Pod */,
 				9F22C6DBE8F4B9BDFA07544DDF76AE85 /* Support Files */,
+				BC98A8BB258BAEC000DCE655 /* Carousel.swift */,
+				BC98A8C0258BAEF700DCE655 /* CarouselCell.swift */,
+				BC98A8C5258BAF3B00DCE655 /* CarouselCellData.swift */,
+				BC98A8CA258BAF6100DCE655 /* CarouselPageController.swift */,
+				BC98A8CF258BAF8B00DCE655 /* ColorUtility.swift */,
+				BC98A8D4258BAFA400DCE655 /* ShadowUtility.swift */,
 			);
 			name = HowdySlider;
 			path = ../..;
@@ -316,7 +331,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					53DCA3F25CF4516972D824FA59C1BECB = {
+						LastSwiftMigration = 1220;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -383,8 +403,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC98A8D5258BAFA400DCE655 /* ShadowUtility.swift in Sources */,
+				BC98A8CB258BAF6100DCE655 /* CarouselPageController.swift in Sources */,
+				BC98A8BC258BAEC000DCE655 /* Carousel.swift in Sources */,
+				BC98A8C6258BAF3B00DCE655 /* CarouselCellData.swift in Sources */,
 				7DDA755BF2E9E813B92D599DF393D1E5 /* HowdySlider-dummy.m in Sources */,
-				2F900EA991EEB94CD55C6CA9726BBCE2 /* ReplaceMe.swift in Sources */,
+				BC98A8D0258BAF8B00DCE655 /* ColorUtility.swift in Sources */,
+				BC98A8C1258BAEF700DCE655 /* CarouselCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +447,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/HowdySlider/HowdySlider-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/HowdySlider/HowdySlider-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/HowdySlider/HowdySlider.modulemap";
 				PRODUCT_MODULE_NAME = HowdySlider;
@@ -430,7 +455,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -454,7 +479,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-HowdySlider_Tests/Pods-HowdySlider_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-HowdySlider_Tests/Pods-HowdySlider_Tests.modulemap";
@@ -488,7 +513,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-HowdySlider_Example/Pods-HowdySlider_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-HowdySlider_Example/Pods-HowdySlider_Example.modulemap";
@@ -532,6 +557,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -554,13 +580,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -592,6 +617,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -617,7 +643,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -646,7 +672,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/HowdySlider/HowdySlider-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/HowdySlider/HowdySlider-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/HowdySlider/HowdySlider.modulemap";
 				PRODUCT_MODULE_NAME = HowdySlider;
@@ -654,7 +680,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -677,7 +703,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-HowdySlider_Tests/Pods-HowdySlider_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-HowdySlider_Tests/Pods-HowdySlider_Tests.modulemap";
@@ -710,7 +736,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-HowdySlider_Example/Pods-HowdySlider_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-HowdySlider_Example/Pods-HowdySlider_Example.modulemap";
