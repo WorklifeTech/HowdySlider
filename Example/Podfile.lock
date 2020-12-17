@@ -1,0 +1,16 @@
+PODS:
+  - HowdySlider (0.1.0)
+
+DEPENDENCIES:
+  - HowdySlider (from `../`)
+
+EXTERNAL SOURCES:
+  HowdySlider:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HowdySlider: 476556e8f90a8ce2f7ec3b577e52b799e5b4976e
+
+PODFILE CHECKSUM: f5a1f714c712e408028b47e61b1a3cf55c46b05d
+
+COCOAPODS: 1.9.3

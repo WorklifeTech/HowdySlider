@@ -1,0 +1,6 @@
+framework module HowdySlider {
+  umbrella header "HowdySlider-umbrella.h"
+
+  export *
+  module * { export * }
+}
