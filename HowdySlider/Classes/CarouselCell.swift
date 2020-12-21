@@ -44,8 +44,8 @@ class CarouselCell: UICollectionViewCell {
                               opacity: 0.65)
         
         mainView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        mainView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10).isActive = true
-        mainView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -10).isActive = true
+        mainView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 15).isActive = true
+        mainView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -15).isActive = true
         mainView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     }
     
