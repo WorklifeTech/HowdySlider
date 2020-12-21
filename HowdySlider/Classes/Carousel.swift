@@ -70,9 +70,9 @@ import SwiftUI
         collectionView.backgroundColor = .clear
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 60).isActive = true
-        collectionView.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
-        collectionView.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
+        collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
+        collectionView.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive = true
+        collectionView.rightAnchor.constraint(equalTo: rightAnchor, constant: 0).isActive = true
         collectionView.heightAnchor.constraint(equalToConstant: frame.height).isActive = true
         
         if enablePageControl {
