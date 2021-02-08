@@ -212,7 +212,7 @@ extension Carousel: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CarouselCell
-        let color = transparent ? UIColor.clear :  UIColor(hex: cellBackgroundColor)
+        let color = transparent ? UIColor.clear : UIColor(hex: cellBackgroundColor)
         cell.data = CarouselCellData(color: color, shadow: cellEnableShadow, radius: cellCornerRadius)
         
         let cellInnerView = cell.getMainView()
