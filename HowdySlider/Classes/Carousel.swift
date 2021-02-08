@@ -27,9 +27,10 @@ import SwiftUI
     @objc public var numberOfPages = 0
     
     // Cell properties
-    @objc public var cellBackgroundColor: String = ""
+    @objc public var cellBackgroundColor: String = "#ffffff"
     @objc public var cellCornerRadius: CGFloat = 0
     @objc public var cellEnableShadow: Bool = true
+    @objc public var transparent: Bool = false
     
     private var timer: Timer = Timer()
     private var firstTick = true
@@ -211,7 +212,8 @@ extension Carousel: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CarouselCell
-        cell.data = CarouselCellData(color: UIColor(hex: cellBackgroundColor), shadow: cellEnableShadow, radius: cellCornerRadius)
+        let color = transparent ? UIColor.clear :  UIColor(hex: cellBackgroundColor)
+        cell.data = CarouselCellData(color: color, shadow: cellEnableShadow, radius: cellCornerRadius)
         
         let cellInnerView = cell.getMainView()
         
