@@ -223,6 +223,10 @@ extension Carousel: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
         if viewItems.count > indexPath.item {
             let customView = viewItems[indexPath.item]
             
+            for subview in cellInnerView.subviews {
+                subview.removeFromSuperview()
+            }
+
             cellInnerView.addSubview(customView)
         }
         
