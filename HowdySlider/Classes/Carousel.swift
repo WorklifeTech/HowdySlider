@@ -126,8 +126,6 @@ import SwiftUI
             collectionView.deleteItems(at: [indexPath])
             collectionView.insertItems(at: [indexPath])
         }
-        
-        collectionView.reloadData()
     }
     
     // MARK: - Private Methods
