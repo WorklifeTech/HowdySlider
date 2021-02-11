@@ -229,7 +229,6 @@ extension Carousel: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
 
             cellInnerView.addSubview(customView)
             cellInnerView.layoutIfNeeded()
-            layoutSubviews()
         }
         
         return cell
