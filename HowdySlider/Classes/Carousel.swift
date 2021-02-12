@@ -123,9 +123,7 @@ import SwiftUI
         
         for index in 0..<items.count {
             let indexPath = IndexPath(item: index, section: 0)
-            collectionView.deleteItems(at: [indexPath])
-            collectionView.insertItems(at: [indexPath])
-            // collectionView.reloadItems(at: [indexPath])
+            collectionView.reloadItems(at: [indexPath])
         }
     }
     

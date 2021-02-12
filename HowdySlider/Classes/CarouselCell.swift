@@ -59,6 +59,8 @@ class CarouselCell: UICollectionViewCell {
     
     public func setSubViews(subview: UIView) {
         mainView.addSubview(subview)
-        contentView.layoutIfNeeded()
+        
+        subview.topAnchor.constraint(equalTo: mainView.topAnchor).isActive = true
+        subview.bottomAnchor.constraint(equalTo: mainView.bottomAnchor).isActive = true
     }
 }
