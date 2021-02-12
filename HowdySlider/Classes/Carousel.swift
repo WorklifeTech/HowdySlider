@@ -214,19 +214,11 @@ extension Carousel: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CarouselCell
         let color = transparent ? UIColor.clear : UIColor(hex: cellBackgroundColor)
         cell.data = CarouselCellData(color: color, shadow: cellEnableShadow, radius: cellCornerRadius)
-        
-        let cellInnerView = cell.getMainView()
-        
-        if viewItems.count > indexPath.item {
+
+        if viewItems.count > indexPath.item && !cell.isRendered {
             let customView = viewItems[indexPath.item]
             
-//            for subview in cellInnerView.subviews {
-//                subview.removeFromSuperview()
-//            }
-            
             cell.setSubViews(subview: customView)
-
-//            cellInnerView.addSubview(customView)
         }
         
         return cell
