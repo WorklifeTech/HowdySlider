@@ -56,4 +56,9 @@ class CarouselCell: UICollectionViewCell {
     public func getMainView() -> UIView {
         return mainView
     }
+    
+    public func setSubViews(subview: UIView) {
+        mainView.addSubview(subview)
+        contentView.layoutIfNeeded()
+    }
 }
