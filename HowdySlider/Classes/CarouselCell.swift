@@ -9,8 +9,6 @@ import UIKit
 
 class CarouselCell: UICollectionViewCell {
     
-    public var isRendered = false
-    
     var data: CarouselCellData? {
         didSet {
             guard let data = data else { return }
@@ -55,12 +53,16 @@ class CarouselCell: UICollectionViewCell {
         super.init(coder: aDecoder)
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        mainView.subviews.forEach({ $0.removeFromSuperview() })
+    }
+    
     public func getMainView() -> UIView {
         return mainView
     }
     
     public func setSubViews(subview: UIView) {
-        isRendered = true
         mainView.addSubview(subview)
 
         subview.topAnchor.constraint(equalTo: mainView.topAnchor).isActive = true
