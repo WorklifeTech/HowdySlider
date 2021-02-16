@@ -120,7 +120,8 @@ import SwiftUI
     
     @objc public func setItems(items: [UIView]) {
         viewItems = items
-        
+        collectionView.reloadData()
+
         for index in 0..<items.count {
             let indexPath = IndexPath(item: index, section: 0)
             collectionView.reloadItems(at: [indexPath])
@@ -207,7 +208,11 @@ extension Carousel: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return numberOfPages
+        return viewItems.count
+    }
+    
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -215,7 +220,7 @@ extension Carousel: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
         let color = transparent ? UIColor.clear : UIColor(hex: cellBackgroundColor)
         cell.data = CarouselCellData(color: color, shadow: cellEnableShadow, radius: cellCornerRadius)
 
-        if viewItems.count > indexPath.item && !cell.isRendered {
+        if viewItems.count > indexPath.item {
             let customView = viewItems[indexPath.item]
             
             cell.setSubViews(subview: customView)
