@@ -40,8 +40,8 @@ class CarouselCell: UICollectionViewCell {
         contentView.layer.masksToBounds = false
         contentView.addShadow(offset: CGSize.init(width: mainView.frame.width, height: mainView.frame.height),
                               color: UIColor.black,
-                              radius: 6.0,
-                              opacity: 0.65)
+                              radius: 3.5,
+                              opacity: 0.3)
         
         mainView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         mainView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 15).isActive = true
