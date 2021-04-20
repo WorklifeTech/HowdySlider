@@ -13,7 +13,7 @@ import SwiftUI
     // MARK: - Properties
     
     // Carousel properties
-    @objc public var intervalInSeconds: Double = 5.0
+    @objc public var intervalInSeconds: Double = 8.0
     @objc public var enableOneDirectionScroll = false
     @objc public var enableAutoPlay = false
     @objc public var enablePageControl = true
@@ -234,6 +234,12 @@ extension Carousel: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
     }
     
     public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+
+        if enableAutoPlay {
+            stop()
+            start()
+        }
+        
         let x = targetContentOffset.pointee.x
         var index = Int(x / collectionView.frame.width)
         
