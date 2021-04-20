@@ -42,8 +42,8 @@ struct CarouselPageController: View {
     // MARK: - Private Methods
     private func shouldShowIndex(index: Int, max: Int) -> Bool {
         let close = index <= max && abs(index - model.currentIndex) <= 2
-        let leftEdge = model.currentIndex <= 1 && index <= 4
-        let rightEdge = max - model.currentIndex <= 2 && max - index <= 4
+        let leftEdge = model.currentIndex <= 1 && index <= 5
+        let rightEdge = max - model.currentIndex <= 2 && max - index <= 5
         
         return close || leftEdge || rightEdge
     }
