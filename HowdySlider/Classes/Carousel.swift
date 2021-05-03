@@ -237,7 +237,6 @@ extension Carousel: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
 
         if enableAutoPlay {
             stop()
-            start()
         }
         
         let x = targetContentOffset.pointee.x
