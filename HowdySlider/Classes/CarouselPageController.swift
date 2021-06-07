@@ -24,15 +24,13 @@ struct CarouselPageController: View {
     var body: some View {
         HStack(spacing: model.circleSpacing) {
             ForEach(0..<model.numberOfPages) { index in // 1
-                if shouldShowIndex(index: index, max: model.numberOfPages) {
-                    Circle()
-                        .fill(model.currentIndex == index ? model.primaryColor : model.secondaryColor)
-                        .scaleEffect(model.currentIndex == index ? 1 : model.smallScale)
-                        .frame(width: model.circleSize, height: model.circleSize)
-                        .transition(AnyTransition.opacity.combined(with: .scale))
-                        .id(index)
-                        .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
-                }
+                Circle()
+                    .fill(model.currentIndex == index ? model.primaryColor : model.secondaryColor)
+                    .scaleEffect(model.currentIndex == index ? 1 : model.smallScale)
+                    .frame(width: model.circleSize, height: model.circleSize)
+                    .transition(AnyTransition.opacity.combined(with: .scale))
+                    .id(index)
+                    .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/)
             }
         }
         .animation(.default)
