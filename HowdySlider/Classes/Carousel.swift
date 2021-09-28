@@ -208,7 +208,7 @@ extension Carousel: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewItems.count
+        return viewItems.count > 0 ? viewItems.count : 1
     }
     
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
