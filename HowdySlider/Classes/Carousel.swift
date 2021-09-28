@@ -173,6 +173,10 @@ import SwiftUI
     @objc private func tapGestureHandler(tap: UITapGestureRecognizer?) {
         var index = pageControllerModel.currentIndex
         
+        if viewItems.count == 0 {
+            return
+        }
+        
         if index == 0 {
             timerOperator = "plus"
         }
@@ -208,7 +212,7 @@ extension Carousel: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewItems.count > 0 ? viewItems.count : 1
+        return viewItems.count
     }
     
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
