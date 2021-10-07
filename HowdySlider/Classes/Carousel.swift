@@ -39,7 +39,7 @@ import SwiftUI
     private var alreadyVisitedIndex = 0
     private var viewItems: [UIView] = []
     
-    private lazy var collectionView: UICollectionView = {
+    @objc public lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         
         layout.scrollDirection = .horizontal
