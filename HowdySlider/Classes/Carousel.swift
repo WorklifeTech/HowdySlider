@@ -99,6 +99,11 @@ import SwiftUI
         timer.invalidate()
     }
     
+    @objc public func navigateToItemAtIndex(index: Int, animated: Bool = true) {
+        let indexPath = IndexPath(item: index, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: animated)
+    }
+    
     @objc public func navigatePrevious() {
         let currentIndex = pageControllerModel.currentIndex
         let nextIndex = max(currentIndex - 1, 0)
