@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HowdySlider'
-  s.version          = '0.3.4'
+  s.version          = '0.3.5'
   s.summary          = 'Slider combining SwiftUI with UIkit.'
 
 # This description is used to generate tags and improve search results.
