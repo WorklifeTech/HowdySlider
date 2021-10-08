@@ -87,6 +87,7 @@ import SwiftUI
     }
 
     @objc public func start() {
+        timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: intervalInSeconds,
                                      target: self,
                                      selector: #selector(tapGestureHandler(tap:)),
@@ -176,6 +177,10 @@ import SwiftUI
     }
     
     @objc private func tapGestureHandler(tap: UITapGestureRecognizer?) {
+        if viewItems.count == 0 {
+            return;
+        }
+
         var index = pageControllerModel.currentIndex
         
         if index == 0 {
