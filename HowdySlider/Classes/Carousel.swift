@@ -274,3 +274,12 @@ extension Carousel: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
         }
     }
 }
+
+
+@objc public class CarouselViewItem: NSObject {
+    @objc public var view: UIView? = nil
+    
+    @objc public override init() {
+        super.init()
+    }
+}
