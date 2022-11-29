@@ -134,6 +134,10 @@ import SwiftUI
         }
     }
     
+    @objc public func getCurrentItem() -> Int {
+        return pageControllerModel.currentIndex
+    }
+    
     // MARK: - Private Methods
     private func setPageControllerModel() {
         if pageControllerSelectedColor != "" {
